@@ -1,0 +1,43 @@
+.root {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping of items to new rows */
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-around; /* Space around rows */
+    gap: 20px; /* Space between rows and items */
+    padding: 20px;
+}
+
+.card-wrapper {
+    width: 150px; /* Fixed width for flags */
+    height: 150px; /* Fixed height for flags */
+    display: flex; /* Flexbox for inner alignment */
+    flex-direction: column; /* Arrange flag and text vertically */
+    align-items: center; /* Center-align content horizontally */
+    justify-content: space-around; /* Space around flag and text */
+    background-color: #f9f9f9; /* Background for the card */
+    border: 1px solid #ddd; /* Light border for aesthetics */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+    text-align: center; /* Center text alignment */
+    margin: 10px; /* Margin for consistent spacing */
+}
+
+.card-image {
+    width: 100%; /* Make the flag fit the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional rounding for flag edges */
+}
+
+.card-content h3, 
+.card-content h4 {
+    margin: 5px 0; /* Minimal spacing between text */
+    font-family: Arial, sans-serif; /* Standard font style */
+    color: #333; /* Text color for readability */
+}
+
+@media (min-width: 1024px) {
+    .root {
+        flex-direction: row; /* Switch to row layout on larger screens */
+        justify-content: space-around; /* Space around flags in each row */
+    }
+}
